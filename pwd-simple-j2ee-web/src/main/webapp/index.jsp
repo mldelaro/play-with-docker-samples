@@ -1,3 +1,3 @@
 <html>
-<div>Simple J2EE web app</div>
+<div>Hello J2EE</div>
 </html>
