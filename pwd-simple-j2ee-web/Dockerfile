@@ -1,7 +1,7 @@
+FROM maven:3.6.0-alpine as builder
+COPY ./ /
+RUN mvn package
+
 FROM tomcat:9-jre8-alpine
-
-# Remove apache tomcat managers
 RUN rm -rf $CATALINA_HOME/webapps/*
-
-# Move built *.war project into tomcat directory
-COPY ./target/*.war $CATALINA_HOME/webapps/
+COPY --from=builder ./target/*.war $CATALINA_HOME/webapps/

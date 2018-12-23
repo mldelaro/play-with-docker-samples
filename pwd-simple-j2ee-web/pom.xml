@@ -2,20 +2,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <parent>
-  	<groupId>example.pwd.simple-j2ee</groupId>
-  	<artifactId>pwd-simple-j2ee</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  	<relativePath>../pom.xml</relativePath>
-  </parent>
-  
   <name>pwd-simple-j2ee-web</name>
-  <groupId>pwd-simple-j2ee-web</groupId>
-  <artifactId>pwd-simple-j2ee-web</artifactId>
+  <groupId>example.pwd.simple.j2ee.hello-web</groupId>
+  <artifactId>hello-web</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
     <resources>
 		<resource>
 			<directory>src/main/resources</directory>
@@ -30,7 +24,6 @@
           <target>1.8</target>
         </configuration>
       </plugin>
-      
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
         <version>2.6</version>
