@@ -1,0 +1,12 @@
+{
+  "name":"hello-node-web-rest",
+  "version":"0.0.1-SNAPSHOT",
+  "main":"main.js",
+  "scripts":{
+    "start":"node main.js"
+  },
+  
+  "dependencies": {
+    "express": "4.16.4"
+  }
+ }
