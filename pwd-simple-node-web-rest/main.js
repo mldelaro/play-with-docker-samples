@@ -10,7 +10,7 @@ app.get("/api/rest/time/now", (req, res, next) => {
 });
 
 app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname + '/index.html'));
+	res.sendFile(path.join(__dirname + '/webapp/index.html'));
 });
 
 app.use('/', express.static(path.join(__dirname, 'webapp')))
