@@ -1,5 +1,5 @@
 {
-  "name":"hello-node-web-app"
+  "name":"hello-node-web-app",
   "version":"0.0.1-SNAPSHOT",
   "main":"main.js",
   "scripts":{

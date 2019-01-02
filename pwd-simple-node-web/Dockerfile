@@ -5,4 +5,4 @@ RUN npm install
 
 COPY . .
 EXPOSE 80
-COMD [ "npm", "start"]
+CMD [ "npm", "start"]
