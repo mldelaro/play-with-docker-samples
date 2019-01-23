@@ -30,17 +30,17 @@ app.get('/api/rest/products', (req, res, next) => {
 app.get('/api/rest/products/:id', (req, res, next) => {
 	let id = req.params.id;
 	console.log('received request for product_id [' + id + ']');
-	produceProvider.selectAllProducts(id, (results) => {
+	produceProvider.selectProductForId(id, (results) => {
 		console.log('on callback' + results);
-		res.json(results);
+		res.json(results[0]);
 	});
 });
 
-/* Create a specific product */
+/* Create a new products */
 app.post('/api/rest/products', (req, res, next) => {
 	let name = req.body.name;
 	let description = req.body.description;
-	console.log('received request for creating a new product [' + id + ']');
+	console.log('received request for creating a new product [' + name + ']');
 	produceProvider.createProduct(name, description, (results) => {
 		console.log('on callback' + results);
 		res.json(results);
