@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  rdbm:
+    build: .
+    environment:
+        MYSQL_ROOT_PASSWORD:
+            "change-me"
+    ports:
+    - "3306:3306"

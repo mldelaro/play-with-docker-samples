@@ -1,0 +1,13 @@
+{
+  "name":"web-node-rdbm-mysql-produce-manager",
+  "version":"0.0.1-SNAPSHOT",
+  "main":"main.js",
+  "scripts":{
+    "start":"node main.js"
+  },
+  
+  "dependencies": {
+    "express": "4.16.4",
+	"mysql": "2.16.0"
+  }
+ }
