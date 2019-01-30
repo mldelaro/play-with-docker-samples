@@ -49,10 +49,9 @@ app.post('/api/rest/products', (req, res, next) => {
 
 /* Delete an existing product */
 app.delete('/api/rest/products/:id', (req, res, next) => {
-	let name = req.body.name;
-	let description = req.body.description;
-	console.log('received request for creating a new product [' + name + ']');
-	produceProvider.createProduct(name, description, (results) => {
+	let productIdToRemove = req.params.id;
+	console.log('received request for deleting an existing product [' + name + ']');
+	produceProvider.deleteProduct(productIdToRemove, (results) => {
 		console.log('on callback' + results);
 		res.json(results);
 	});
