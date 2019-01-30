@@ -47,6 +47,17 @@ app.post('/api/rest/products', (req, res, next) => {
 	});
 });
 
+/* Delete an existing product */
+app.delete('/api/rest/products/:id', (req, res, next) => {
+	let name = req.body.name;
+	let description = req.body.description;
+	console.log('received request for creating a new product [' + name + ']');
+	produceProvider.createProduct(name, description, (results) => {
+		console.log('on callback' + results);
+		res.json(results);
+	});
+});
+
 // WEBAPP
 app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname + '/webapp/index.html'));
